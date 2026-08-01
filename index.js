@@ -1,7 +1,7 @@
 const bedrock = require('bedrock-protocol');
 const http = require('http');
 
-// 1. خادم وهمي لإرضاء Render ومنع إغلاق الخدمة
+// 1. خادم وهمي لإرضاء Render
 const port = process.env.PORT || 3000;
 http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -10,16 +10,15 @@ http.createServer((req, res) => {
   console.log(`Web server listening on port ${port}`);
 });
 
-// 2. إعدادات البوت
+// 2. إعدادات الاتصال بحساب رسمي
 const options = {
   host: 'gold.magmanode.com',
   port: 30944,
-  username: 'AFK_Bot_QDYMI',
-  offline: true
+  profilesFolder: './controls' // لحفظ بيانات الجلسة وعدم طلب التسجيل كل مرة
 };
 
 function createBot() {
-  console.log('جاري الاتصال بالسيرفر...');
+  console.log('جاري الاتصال بالسيرفر عبر حساب Microsoft...');
   const client = bedrock.createClient(options);
 
   client.on('join', () => {
