@@ -77,3 +77,12 @@ function startBot() {
 
 // تشغيل البوت
 startBot();
+const options = {
+    host: 'gold.magmanode.com',
+    port: 30944,
+    username: 'AFK_Bot_QDYMI',
+    authTitle: '000000004412ae92',
+    flow: 'msal',
+    profilesFolder: './controls',
+    offline: false
+};
