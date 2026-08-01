@@ -1,8 +1,8 @@
 const bedrock = require('bedrock-protocol');
 const http = require('http');
 
-// 1. خادم وهمي لإرضاء Render
-const port = process.env.PORT || 3000;
+// سيرفر ويب بسيط لإبقاء Render شغال
+const port = process.env.PORT || 10000;
 http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.end('AFK Bot is running 24/7!\n');
@@ -10,11 +10,10 @@ http.createServer((req, res) => {
   console.log(`Web server listening on port ${port}`);
 });
 
-// 2. إعدادات الاتصال بحساب رسمي
 const options = {
   host: 'gold.magmanode.com',
   port: 30944,
-  profilesFolder: './controls' // لحفظ بيانات الجلسة وعدم طلب التسجيل كل مرة
+  profilesFolder: './controls'
 };
 
 function createBot() {
