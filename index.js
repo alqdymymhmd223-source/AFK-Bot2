@@ -75,8 +75,7 @@ function startBot() {
     });
 }
 
-// تشغيل البوت
-startBot();
+
 const options = {
     host: 'gold.magmanode.com',
     port: 30944,
@@ -86,3 +85,5 @@ const options = {
     profilesFolder: './controls',
     offline: false
 };
+start//تشغيل البوت
+startBot();
