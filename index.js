@@ -10,14 +10,14 @@ http.createServer((req, res) => {
     console.log(`HTTP Server Listening on port ${PORT}`);
 });
 
-// 2. إعدادات الاتصال بالسيرفر
+// 2. إعدادات الاتصال بالسيرفر (تم تغيير مجلد البروفايل للبدء من جديد)
 const options = {
     host: 'gold.magmanode.com',
     port: 30944,
     username: 'AFK_Bot_QDYMI',
     authTitle: '000000004412ae92',
     flow: 'msal',
-    profilesFolder: './controls',
+    profilesFolder: './controls_v2', // تغيير المسار لإجبار تسجيل دخول جديد
     offline: false
 };
 
